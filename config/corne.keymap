@@ -154,6 +154,16 @@
             key-positions = <8 9>;
             timeout-ms = <20>;
         };
+        Mainbootloaderleft {
+            bindings = <&bootloader>;
+            key-positions = <0 4>;
+            timeout-ms = <20>;
+        };
+        Mainbootloaderright {
+            bindings = <&bootloader>;
+            key-positions = <7 11>;
+            timeout-ms = <20>;
+        };
     };
 };
 / {
