@@ -19,6 +19,21 @@
 &mt { quick_tap_ms = <220>; };
 
 / {
+
+combos {
+        compatible = "zmk,combos";
+
+        Mainbootloaderleft {
+            bindings = <&bootloader>;
+            key-positions = <0 4>;
+            timeout-ms = <20>;
+        };
+        Mainbootloaderright {
+            bindings = <&bootloader>;
+            key-positions = <7 11>;
+            timeout-ms = <20>;
+        };
+    };
     macros {
         numdot: numdot {
             label = "ZM_numdot";
@@ -92,13 +107,13 @@
                 adjust_layer {
                         bindings = <
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                  &bootloader   &none         &none         &none         &none         &none             &none         &none         &none         &none         &none         &bootloader
+                 &bootloader    &sys_reset   &out OUT_TOG     &none         &none         &none             &none         &none         &none      &out OUT_TOG   &sys_reset   &bootloader
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+                 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 4  &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                  &ext_power EP_OFF &kp KP_NUM &none        &none         &none         &none             &none         &none         &none         &none         &none         &ext_power EP_OFF
+                   &none       &kp KP_NUM       &none         &none         &none         &none             &none         &none         &none         &none         &none         &none
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                            &trans        &none         &trans            &trans        &none         &trans
+                                                              &trans        &trans        &trans            &trans        &trans        &trans
             //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 
                         >;
