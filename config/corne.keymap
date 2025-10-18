@@ -19,8 +19,7 @@
 &mt { quick_tap_ms = <220>; };
 
 / {
-
-combos {
+    combos {
         compatible = "zmk,combos";
 
         Mainbootloaderleft {
@@ -34,6 +33,7 @@ combos {
             timeout-ms = <20>;
         };
     };
+
     macros {
         numdot: numdot {
             label = "ZM_numdot";
