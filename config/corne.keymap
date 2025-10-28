@@ -33,6 +33,18 @@
             key-positions = <7 11>;
             timeout-ms = <20>;
         };
+
+        switch_to_en {
+            bindings = <&switch_to_en>;
+            key-positions = <3 4>;
+            timeout-ms = <50>;
+        };
+
+        switch_to_ru {
+            bindings = <&switch_to_ru>;
+            key-positions = <7 8>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
@@ -64,6 +76,36 @@
                 <&kp KP_N6 &kp KP_N2>,
                 <&macro_release>,
                 <&kp LALT>;
+        };
+
+        switch_to_en: switch_to_en {
+            label = "ZM_switch_to_en";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT>;
+        };
+
+        switch_to_ru: switch_to_ru {
+            label = "ZM_switch_to_ru";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT>;
         };
     };
 };
