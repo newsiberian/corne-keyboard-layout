@@ -48,11 +48,25 @@ hs.hotkey.bind(hyper, "2", function()
 end)
 
 hs.hotkey.bind(hyper, "3", function()
-    hs.application.launchOrFocus("Webstorm")
+    hs.application.launchOrFocus("Chrome")
 end)
 
 hs.hotkey.bind(hyper, "4", function()
+    hs.application.launchOrFocus("Webstorm")
+end)
+
+hs.hotkey.bind(hyper, "5", function()
     hs.application.launchOrFocus("Slack")
+end)
+
+hs.hotkey.bind(hyper, "6", function()
+    hs.application.launchOrFocus("Finder")
+    hs.osascript.applescript([[
+        tell application "Finder"
+            make new Finder window to (path to home folder)
+            activate
+        end tell
+    ]])
 end)
 
 -- Debug: show all available layouts
