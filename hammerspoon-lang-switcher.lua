@@ -12,7 +12,6 @@ local function switchToLayout(layoutName)
     for _, layout in pairs(layouts) do
         if string.find(string.lower(layout), string.lower(layoutName)) then
             hs.keycodes.setLayout(layout)
-            hs.alert.show("Switched to: " .. layout)
             return
         end
     end
@@ -30,9 +29,6 @@ end)
 hs.hotkey.bind({"ctrl", "alt"}, "2", function()
     switchToLayout("Russian")
 end)
-
--- Notification that config is loaded
-hs.alert.show("Language Switcher loaded!")
 
 -- Optional function to show current layout
 hs.hotkey.bind({"ctrl", "alt"}, "3", function()
