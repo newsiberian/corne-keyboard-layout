@@ -163,19 +163,19 @@
 
         lower_layer {
             bindings = <
-&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8       &kp N9  &kp PLUS     &kp EXCL       &kp AT    &kp HASH     &kp DLLR  &kp PRCNT  &kp F1
-&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5       &kp N6  &kp MINUS    &kp CARET      &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR   &kp F2
-&kp EQUAL  &kp N0           &kp N1  &kp N2       &kp N3  &numdot      &kp LG(SPACE)  &kp F4    &kp F5       &kp F6    &kp F7     &kp F3
-                                    &lt ADJ TAB  &trans  &trans       &trans         &trans    &lt ADJ DEL
+&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8       &kp N9  &kp PLUS      &kp EXCL       &kp AT    &kp HASH     &kp DLLR  &kp PRCNT  &kp F1
+&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5       &kp N6  &kp MINUS     &kp CARET      &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR   &kp F2
+&kp EQUAL  &kp N0           &kp N1  &kp N2       &kp N3  &kp KP_DOT    &kp LG(SPACE)  &kp F4    &kp F5       &kp F6    &kp F7     &kp F3
+                                    &lt ADJ TAB  &trans  &trans        &trans         &trans    &lt ADJ DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&kp LWIN   &kp C_VOL_UP  &kp PG_UP  &kp C_PP       &kp HOME  &kp C_PAUSE    &kp PG_UP    &kp HOME  &kp UP    &kp END    &none  &kp C_VOLUME_UP
-&kp LCTRL  &kp C_VOL_DN  &kp LEFT   &kp UP         &kp DOWN  &kp RIGHT      &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &kp C_VOLUME_DOWN
-&kp LALT   &kp C_MUTE    &kp PG_DN  &kp LG(LS(S))  &kp END   &kp C_PLAY     &none        &none     &grtsgn   &none      &none  &kp C_MUTE
-                                    &trans         &trans    &lt ADJ RET    &lt ADJ ESC  &trans    &trans
+&kp LWIN   &kp C_VOL_UP  &kp PG_UP  &kp C_PP       &kp HOME  &kp C_PAUSE    &kp PG_UP                 &kp HOME                  &kp UP                    &kp END                   &none  &kp C_VOLUME_UP
+&kp LCTRL  &kp C_VOL_DN  &kp LEFT   &kp UP         &kp DOWN  &kp RIGHT      &kp PG_DN                 &kp LEFT                  &kp DOWN                  &kp RIGHT                 &none  &kp C_VOLUME_DOWN
+&kp LALT   &kp C_MUTE    &kp PG_DN  &kp LG(LS(S))  &kp END   &kp C_PLAY     &kp RS(RA(RC(NUMBER_1)))  &kp RS(RA(RC(NUMBER_2)))  &kp RS(RA(RC(NUMBER_3)))  &kp RS(RA(RC(NUMBER_4)))  &none  &kp C_MUTE
+                                    &trans         &trans    &lt ADJ RET    &lt ADJ ESC               &trans                    &trans
             >;
         };
 
