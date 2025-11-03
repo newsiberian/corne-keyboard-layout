@@ -1,6 +1,9 @@
 -- Hammerspoon Language Switcher for ZMK keyboard
 -- Save this file to ~/.hammerspoon/init.lua or add its contents there
 
+-- Common modifier chord to launch favorite apps
+local hyper = {"cmd", "alt", "ctrl"}
+
 -- Function to switch to a specific layout
 local function switchToLayout(layoutName)
     local currentSource = hs.keycodes.currentSourceID()
@@ -34,6 +37,22 @@ end)
 hs.hotkey.bind({"ctrl", "alt"}, "3", function()
     local currentLayout = hs.keycodes.currentLayout()
     hs.alert.show("Current layout: " .. currentLayout)
+end)
+
+hs.hotkey.bind(hyper, "1", function()
+    hs.application.launchOrFocus("Firefox")
+end)
+
+hs.hotkey.bind(hyper, "2", function()
+    hs.application.launchOrFocus("Arc")
+end)
+
+hs.hotkey.bind(hyper, "3", function()
+    hs.application.launchOrFocus("Webstorm")
+end)
+
+hs.hotkey.bind(hyper, "4", function()
+    hs.application.launchOrFocus("Slack")
 end)
 
 -- Debug: show all available layouts
