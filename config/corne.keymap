@@ -55,12 +55,10 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N4 &kp KP_N6>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N4>,
+                <&macro_tap &kp KP_N6>,
+                <&macro_release &kp LALT>;
         };
 
         grtsgn: grtsgn {
@@ -70,12 +68,10 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N6 &kp KP_N2>,
-                <&macro_release>,
-                <&kp LALT>;
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N6>,
+                <&macro_tap &kp KP_N2>,
+                <&macro_release &kp LALT>;
         };
 
         switch_to_en: switch_to_en {
@@ -85,12 +81,11 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LALT>,
-                <&macro_tap>,
-                <&kp N1>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT>;
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp N1>,
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LCTRL>;
         };
 
         switch_to_ru: switch_to_ru {
@@ -100,12 +95,11 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LALT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT>;
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp N2>,
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LCTRL>;
         };
     };
 };
