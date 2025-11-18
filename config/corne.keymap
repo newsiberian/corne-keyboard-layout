@@ -77,6 +77,45 @@
                 <&macro_release>,
                 <&kp LALT &kp LCTRL>;
         };
+
+        switch_to_prev: switch_to_prev {
+            label = "ZM_switch_to_prev";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LALT &kp LCTRL>;
+        };
+
+        macro_toggle_bracket: macro_toggle_bracket {
+            label = "ZM_macro_toggle_bracket_open";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings =
+                <&switch_to_en>,
+                <&kp LBKT>,
+                <&switch_to_prev>;
+        };
+
+        macro_toggle_bracket_close: macro_toggle_bracket_close {
+            label = "ZM_macro_toggle_bracket_close";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings =
+                <&switch_to_en>,
+                <&kp RBKT>,
+                <&switch_to_prev>;
+        };
     };
 };
 
