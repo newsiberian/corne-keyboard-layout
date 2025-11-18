@@ -4,23 +4,56 @@
 -- Common modifier chord to launch favorite apps
 local hyper = {"cmd", "alt", "ctrl"}
 
--- Function to switch to a specific layout
-local function switchToLayout(layoutName)
-    local currentSource = hs.keycodes.currentSourceID()
+local previousLayout = nil
 
-    -- Get list of all available layouts
+local function findLayout(layoutName)
     local layouts = hs.keycodes.layouts()
 
-    -- Search for the needed layout
-    for _, layout in pairs(layouts) do
-        if string.find(string.lower(layout), string.lower(layoutName)) then
-            hs.keycodes.setLayout(layout)
-            return
+    -- Try exact match first
+    for _, layout in ipairs(layouts) do
+        if layout == layoutName then
+            return layout
         end
     end
 
-    -- If not found by partial match, try exact match
-    hs.keycodes.setLayout(layoutName)
+    -- Fallback to partial match
+    local target = string.lower(layoutName)
+    for _, layout in ipairs(layouts) do
+        if string.find(string.lower(layout), target, 1, true) then
+            return layout
+        end
+    end
+
+    return nil
+end
+
+local function switchToLayout(layoutName)
+    local layout = findLayout(layoutName)
+    if not layout then
+        return
+    end
+
+    local currentLayout = hs.keycodes.currentLayout()
+    if currentLayout == layout then
+        return
+    end
+
+    previousLayout = currentLayout
+    hs.keycodes.setLayout(layout)
+end
+
+-- Function to return to the previously active layout
+local function switchToPreviousLayout()
+    if not previousLayout then
+        return
+    end
+
+    local layout = findLayout(previousLayout)
+    previousLayout = nil
+
+    if layout then
+        hs.keycodes.setLayout(layout)
+    end
 end
 
 -- Bind Ctrl+Alt+1 to switch to English
@@ -33,10 +66,9 @@ hs.hotkey.bind({"ctrl", "alt"}, "2", function()
     switchToLayout("Russian")
 end)
 
--- Optional function to show current layout
+-- Bind Ctrl+Alt+3 to return to the previously active layout
 hs.hotkey.bind({"ctrl", "alt"}, "3", function()
-    local currentLayout = hs.keycodes.currentLayout()
-    hs.alert.show("Current layout: " .. currentLayout)
+    switchToPreviousLayout()
 end)
 
 hs.hotkey.bind(hyper, "1", function()
