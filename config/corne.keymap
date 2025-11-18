@@ -133,19 +133,19 @@
 
         lower_layer {
             bindings = <
-&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8       &kp N9  &kp PLUS      &kp EXCL       &kp AT    &kp HASH     &kp DLLR  &kp PRCNT  &kp F1
-&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5       &kp N6  &kp MINUS     &kp CARET      &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR   &kp F2
-&kp EQUAL  &kp N0           &kp N1  &kp N2       &kp N3  &kp KP_DOT    &kp LG(SPACE)  &kp F4    &kp F5       &kp F6    &kp F7     &kp F3
+&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8       &kp N9  &kp PLUS      &kp EXCL       &kp AT    &kp HASH     &kp DLLR  &kp PRCNT  &none
+&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5       &kp N6  &kp MINUS     &kp CARET      &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR   &none
+&kp EQUAL  &kp N0           &kp N1  &kp N2       &kp N3  &kp KP_DOT    &kp LG(SPACE)  &none     &none        &none     &none      &none
                                     &lt ADJ TAB  &trans  &trans        &trans         &trans    &lt ADJ DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&kp LWIN   &none  &kp PG_UP  &none          &kp HOME  &none          &kp PG_UP                 &kp HOME                  &kp UP                    &kp END                   &none                     &kp C_VOLUME_UP
-&kp LCTRL  &none  &kp LEFT   &kp UP         &kp DOWN  &kp RIGHT      &kp PG_DN                 &kp LEFT                  &kp DOWN                  &kp RIGHT                 &kp RG(RA(RC(NUMBER_6)))  &kp C_VOLUME_DOWN
-&kp LALT   &none  &kp PG_DN  &kp LG(LS(S))  &kp END   &none          &kp RA(RC(RG(NUMBER_1)))  &kp RA(RC(RG(NUMBER_2)))  &kp RA(RC(RG(NUMBER_3)))  &kp RA(RC(RG(NUMBER_4)))  &kp RA(RG(RC(NUMBER_5)))  &kp C_MUTE
-                             &trans         &trans    &lt ADJ RET    &lt ADJ ESC               &trans                    &trans
+&kt F11  &kp F6  &kp F7  &kp F8         &kp F9  &kp F10        &kp PG_UP                 &kp HOME                  &kp UP                    &kp END                   &none                     &kp C_VOLUME_UP
+&kt F12  &kp F1  &kp F2  &kp F3         &kp F4  &kp F5         &kp PG_DN                 &kp LEFT                  &kp DOWN                  &kp RIGHT                 &kp RG(RA(RC(NUMBER_6)))  &kp C_VOLUME_DOWN
+&none    &none   &none   &kp LG(LS(S))  &none   &none          &kp RA(RC(RG(NUMBER_1)))  &kp RA(RC(RG(NUMBER_2)))  &kp RA(RC(RG(NUMBER_3)))  &kp RA(RC(RG(NUMBER_4)))  &kp RA(RG(RC(NUMBER_5)))  &kp C_MUTE
+                         &trans         &trans  &lt ADJ RET    &lt ADJ ESC               &trans                    &trans
             >;
         };
 
