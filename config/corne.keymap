@@ -93,7 +93,7 @@
                 <&kp LALT &kp LCTRL>;
         };
 
-        macro_toggle_bracket: macro_toggle_bracket {
+        toggle_bracket: toggle_bracket {
             label = "ZM_macro_toggle_bracket_open";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -105,7 +105,7 @@
                 <&switch_to_prev>;
         };
 
-        macro_toggle_bracket_close: macro_toggle_bracket_close {
+        toggle_bracket_close: toggle_bracket_close {
             label = "ZM_macro_toggle_bracket_close";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
