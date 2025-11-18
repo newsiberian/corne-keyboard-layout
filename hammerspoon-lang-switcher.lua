@@ -48,7 +48,7 @@ hs.hotkey.bind(hyper, "2", function()
 end)
 
 hs.hotkey.bind(hyper, "3", function()
-    hs.application.launchOrFocus("Chrome")
+    hs.application.launchOrFocus("Google Chrome")
 end)
 
 hs.hotkey.bind(hyper, "4", function()
