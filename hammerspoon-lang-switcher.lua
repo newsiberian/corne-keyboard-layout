@@ -72,11 +72,11 @@ hs.hotkey.bind({"ctrl", "alt"}, "3", function()
 end)
 
 hs.hotkey.bind(hyper, "1", function()
-    hs.application.launchOrFocus("Firefox")
+    hs.application.launchOrFocus("Arc")
 end)
 
 hs.hotkey.bind(hyper, "2", function()
-    hs.application.launchOrFocus("Arc")
+    hs.application.launchOrFocus("Firefox")
 end)
 
 hs.hotkey.bind(hyper, "3", function()
