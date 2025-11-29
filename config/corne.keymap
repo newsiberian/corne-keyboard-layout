@@ -150,28 +150,37 @@
 
         default_layer {
             bindings = <
-&kp RBKT   &kp Q                &kp W            &kp E              &kp R            &kp T              &kp Y        &kp U             &kp I               &kp O                 &kp P                &kp LBKT
-&kp GRAVE  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F  &kp G              &kp H        &hmr RIGHT_GUI J  &hmr RIGHT_SHIFT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_ALT SEMI  &kp SQT
-&kp BSLH   &kp Z                &lp LG(X) X      &lp LG(C) C        &lp LG(V) V      &lp LS(LG(B)) B    &kp N        &kp M             &kp COMMA           &kp DOT               &kp FSLH             &kp MINUS
-                                                 &lt RSE TAB        &kp SPACE        &lt LWR RET        &lt LWR ESC  &kp BSPC          &lt RSE DEL
+&kp RBKT   &kp Q                &kp W            &kp E              &kp R            &kp T              &kp Y      &kp U             &kp I               &kp O                 &kp P                &kp LBKT
+&kp GRAVE  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F  &lt 3 G            &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_SHIFT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_ALT SEMI  &kp SQT
+&kp BSLH   &kp Z                &lp LG(X) X      &lp LG(C) C        &lp LG(V) V      &lp LS(LG(B)) B    &kp N      &kp M             &kp COMMA           &kp DOT               &kp FSLH             &kp MINUS
+                                                 &lt 2 TAB          &kp SPACE        &lt 1 RET          &lt 1 ESC  &kp BSPC          &lt 2 DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8       &kp N9  &kp PLUS        &kp EXCL       &kp AT    &kp HASH     &kp DLLR  &kp PRCNT  &none
-&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5       &kp N6  &kp LS(BSLH)    &kp CARET      &kp AMPS  &kp LPAR     &kp RPAR  &kp BSLH   &none
-&none      &kp N0           &kp N1  &kp N2       &kp N3  &kp EQUAL       &kp LG(SPACE)  &kp STAR  &kp LBKT     &kp RBKT  &none      &none
-                                    &lt ADJ TAB  &trans  &trans          &trans         &trans    &lt ADJ DEL
+&kp CAPS   &kp KP_MULTIPLY  &kp N7  &kp N8     &kp N9  &kp PLUS        &kp EXCL       &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  &none
+&kp K_APP  &kp KP_SLASH     &kp N4  &kp N5     &kp N6  &kp LS(BSLH)    &kp CARET      &kp AMPS  &kp LPAR   &kp RPAR  &kp BSLH   &none
+&none      &kp N0           &kp N1  &kp N2     &kp N3  &kp EQUAL       &kp LG(SPACE)  &kp STAR  &kp LBKT   &kp RBKT  &none      &none
+                                    &lt 4 TAB  &trans  &trans          &trans         &trans    &lt 4 DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&kt F11  &kp F6  &kp F7  &kp F8         &kp F9  &kp F10        &kp PG_UP                 &kp HOME                  &kp UP                    &kp END                   &none                     &kp C_VOLUME_UP
-&kt F12  &kp F1  &kp F2  &kp F3         &kp F4  &kp F5         &kp PG_DN                 &kp LEFT                  &kp DOWN                  &kp RIGHT                 &kp RG(RA(RC(NUMBER_6)))  &kp C_VOLUME_DOWN
-&none    &none   &none   &kp LG(LS(S))  &none   &none          &kp RA(RC(RG(NUMBER_1)))  &kp RA(RC(RG(NUMBER_2)))  &kp RA(RC(RG(NUMBER_3)))  &kp RA(RC(RG(NUMBER_4)))  &kp RA(RG(RC(NUMBER_5)))  &kp C_MUTE
-                         &trans         &trans  &lt ADJ RET    &lt ADJ ESC               &trans                    &trans
+&kt F11  &kp F6  &kp F7  &kp F8         &kp F9  &kp F10      &kp PG_UP                 &kp HOME                  &kp UP                    &kp END                   &none                     &kp C_VOLUME_UP
+&kt F12  &kp F1  &kp F2  &kp F3         &kp F4  &kp F5       &kp PG_DN                 &kp LEFT                  &kp DOWN                  &kp RIGHT                 &kp RG(RA(RC(NUMBER_6)))  &kp C_VOLUME_DOWN
+&none    &none   &none   &kp LG(LS(S))  &none   &none        &kp RA(RC(RG(NUMBER_1)))  &kp RA(RC(RG(NUMBER_2)))  &kp RA(RC(RG(NUMBER_3)))  &kp RA(RC(RG(NUMBER_4)))  &kp RA(RG(RC(NUMBER_5)))  &kp C_MUTE
+                         &trans         &trans  &lt 4 RET    &lt 4 ESC                 &trans                    &trans
+            >;
+        };
+
+        spec_chars_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LPAR       &kp RPAR     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBKT       &kp RBKT     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RS(COMMA)  &kp RS(DOT)  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans         &trans
             >;
         };
 
