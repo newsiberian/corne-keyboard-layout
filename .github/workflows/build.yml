@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - "build.yaml"
       - "config/*.keymap"
       - "config/*.dtsi"
       - "config/boards/shields/*.conf"
